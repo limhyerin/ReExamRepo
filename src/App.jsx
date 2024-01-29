@@ -17,6 +17,13 @@ function App() {
   ]);
   const [filteredStudents, setFilteredStudents] = useState(students);
 
+  // TODO: map을 사용하여 필터링된 학생들의 정보를 표시하세요.
+  const studentList = filteredStudents.map((student, index) => (
+    <li key={index}>
+      {student.name} - Age: {student.age}, Grade: {student.grade}
+    </li>
+  ));
+
   // TODO: filterByAge 함수를 작성하세요. 이 함수는 최소 나이를 매개변수로 받아 해당 나이 이상인 학생들로 필터링해야 합니다.
   const filterByAge = (minAge) => {
     // 여기에 코드를 작성하세요.
@@ -33,6 +40,12 @@ function App() {
   // TODO: resetFilter 함수를 작성하세요. 이 함수는 필터를 초기화하여 모든 학생들을 표시해야 합니다.
   const resetFilter = () => {
     // 여기에 코드를 작성하세요.
+    setFilteredStudents('');
+    filteredStudents.map((student, index) => (
+      <li key={index}>
+        {student.name} - Age: {student.age}, Grade: {student.grade}
+      </li>
+    ));
     setFilteredStudents();
   };
 
