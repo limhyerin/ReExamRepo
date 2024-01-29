@@ -36,7 +36,9 @@ function App() {
           </li>
         })}
         {/* TODO: 학생이름을 클릭하면 나이와 점수가 alert 돼야 해요.*/}
-        <button onClick={onClickAgeGrade} value={minAge} onChange={inputMinAge}>{}</button>
+        <button onClick={() => {
+          alert();
+        }}>{}</button>
       </ul>
     </div>
   );
