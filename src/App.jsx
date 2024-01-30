@@ -20,11 +20,11 @@ const filteredStudent = students.filter((student) => student.age >= 18);
         {
           filteredStudent.map((student, index) => {
             return (
-              <ul key={index} onClick={() => {
+              <li key={index} onClick={() => {
                 alert(`나이는 ${student.age}이고 점수는 ${student.grade}입니다`);
               }}>
                 {student.name}
-              </ul> 
+              </li> 
             )
           })
         }
